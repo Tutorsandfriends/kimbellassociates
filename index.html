@@ -1,64 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jeffrey J. Kimbell & Associates provides strategic legislative, regulatory, policy, and advocacy solutions to the life sciences community.">
-  <title>Jeffrey J. Kimbell & Associates — Healthcare Policy & Advocacy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
-  <style>
-    :root{--ink:#14233d;--navy:#1c3155;--blue:#506f9f;--sand:#e9e0d0;--cream:#f6f2ea;--white:#fff;--line:rgba(20,35,61,.16);--shadow:0 24px 60px rgba(10,25,50,.14)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:"DM Sans",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}img{display:block;width:100%}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase}.serif{font-family:"Libre Caslon Display",serif;font-weight:400}.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:20;background:#fff;padding:10px}
-    header{position:absolute;z-index:10;left:0;right:0;top:0;color:#fff;border-bottom:1px solid rgba(255,255,255,.22)}.nav{height:94px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:16px}.brand img{width:218px;height:auto}.navlinks{display:flex;gap:34px;align-items:center;font-size:.88rem}.navlinks a{opacity:.86;transition:.2s}.navlinks a:hover{opacity:1}.nav-cta{padding:12px 18px;border:1px solid rgba(255,255,255,.55);border-radius:999px}.menu{display:none;background:none;border:0;color:#fff;font:inherit;font-size:1.4rem}
-    .hero{min-height:760px;color:#fff;display:grid;align-items:end;padding:190px 0 88px;position:relative;background:linear-gradient(90deg,rgba(11,28,54,.94) 0%,rgba(16,38,71,.78) 48%,rgba(16,38,71,.27) 100%),url("https://www.kimbell-associates.com/uploads/1/1/0/7/110790979/background-images/1289110629.jpg") center/cover}.hero:after{content:"";position:absolute;inset:auto 0 0;height:130px;background:linear-gradient(transparent,rgba(7,22,43,.25));pointer-events:none}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,760px) 1fr;gap:70px;align-items:end}.hero h1{font-size:clamp(3.5rem,7vw,6.6rem);line-height:.97;letter-spacing:-.045em;margin:18px 0 28px}.hero-copy{font-size:1.12rem;max-width:650px;color:rgba(255,255,255,.8)}.hero-actions{display:flex;gap:14px;margin-top:38px}.btn{display:inline-flex;align-items:center;gap:18px;padding:15px 21px;border-radius:3px;font-size:.83rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;transition:.25s}.btn-light{background:#fff;color:var(--ink)}.btn-light:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.2)}.btn-ghost{border:1px solid rgba(255,255,255,.45)}.btn:after{content:"→";font-size:1.1rem}.hero-aside{border-left:1px solid rgba(255,255,255,.35);padding-left:28px;margin-bottom:10px}.hero-aside strong{font-family:"Libre Caslon Display",serif;font-size:2.7rem;font-weight:400;display:block;line-height:1}.hero-aside span{color:rgba(255,255,255,.7);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}
-    .intro{padding:130px 0 110px}.intro-grid{display:grid;grid-template-columns:300px 1fr;gap:100px}.intro h2{font-size:clamp(2.4rem,4.4vw,4.5rem);line-height:1.07;letter-spacing:-.035em;margin:0 0 32px}.intro-copy{columns:2;column-gap:54px;color:#506077;font-size:.98rem}.intro-copy p{margin:0 0 24px;break-inside:avoid}.rule{width:44px;height:1px;background:var(--blue);margin:24px 0}.fact{padding:24px 0;border-top:1px solid var(--line)}.fact strong{font:400 2rem/1 "Libre Caslon Display",serif;display:block;margin-bottom:6px}.fact span{font-size:.8rem;color:#69768a;text-transform:uppercase;letter-spacing:.1em}
-    .services{background:var(--ink);color:#fff;padding:120px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:50px}.section-head h2{font-size:clamp(2.6rem,5vw,4.6rem);line-height:1.05;margin:10px 0 0;letter-spacing:-.035em}.section-head p{max-width:390px;color:rgba(255,255,255,.64);margin:0 0 10px}.cards{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}.card{grid-column:span 4;min-height:440px;position:relative;overflow:hidden;background:#243a5e}.card:nth-child(4),.card:nth-child(5){grid-column:span 6}.card img{position:absolute;inset:0;height:100%;object-fit:cover;filter:saturate(.72);transition:.6s}.card:before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(10,25,50,.06) 25%,rgba(10,25,50,.92) 100%)}.card-body{position:absolute;z-index:2;left:30px;right:30px;bottom:27px}.card-num{font-size:.7rem;letter-spacing:.15em;opacity:.66}.card h3{font:400 2rem/1.08 "Libre Caslon Display",serif;margin:10px 0 16px}.card-link{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:5px}.card:hover img{transform:scale(1.045);filter:saturate(1)}
-    .difference{padding:130px 0;background:var(--sand)}.difference-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}.difference h2{font-size:clamp(2.6rem,5vw,4.6rem);line-height:1.05;letter-spacing:-.035em;margin:12px 0 28px}.difference p{color:#566277;max-width:570px}.pillars{margin-top:42px;border-top:1px solid var(--line)}.pillar{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}.pillar b{color:var(--blue);font-size:.75rem;letter-spacing:.12em}.pillar strong{font:400 1.28rem "Libre Caslon Display",serif}.image-stack{position:relative;padding:0 0 60px 70px}.image-stack img{height:590px;object-fit:cover;box-shadow:var(--shadow)}.image-note{position:absolute;left:0;bottom:0;background:var(--navy);color:#fff;width:245px;padding:28px}.image-note strong{font:400 2.4rem/1 "Libre Caslon Display",serif;display:block}.image-note span{font-size:.74rem;opacity:.7;text-transform:uppercase;letter-spacing:.1em}
-    .cta{background:#4b6995;color:#fff;padding:105px 0}.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:50px}.cta h2{font-size:clamp(2.5rem,5vw,4.8rem);line-height:1;margin:10px 0 0;max-width:760px}.cta .btn{flex:0 0 auto}
-    footer{background:#0d1b31;color:rgba(255,255,255,.72);padding:70px 0 28px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:70px;padding-bottom:56px}.footer-brand img{width:240px;margin-bottom:24px}.footer-brand p{max-width:390px;font-size:.88rem}.footer-col h3{font-size:.72rem;color:#fff;text-transform:uppercase;letter-spacing:.14em;margin:0 0 18px}.footer-col a,.footer-col span{display:block;font-size:.88rem;margin:9px 0}.copyright{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;font-size:.75rem}
-    @media(max-width:900px){.navlinks{display:none;position:absolute;top:94px;left:0;right:0;background:var(--ink);padding:25px 24px;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.hero-grid,.intro-grid,.difference-grid{grid-template-columns:1fr}.hero-aside{display:none}.intro-grid{gap:55px}.intro-copy{columns:1}.card,.card:nth-child(4),.card:nth-child(5){grid-column:span 6}.section-head,.cta-inner{align-items:flex-start;flex-direction:column}.difference-grid{gap:60px}}
-    @media(max-width:620px){.wrap{width:min(100% - 30px,1180px)}.brand img{width:175px}.hero{min-height:700px;padding-bottom:62px}.hero h1{font-size:3.45rem}.hero-actions{flex-direction:column;align-items:flex-start}.intro,.services,.difference{padding:85px 0}.card,.card:nth-child(4),.card:nth-child(5){grid-column:1/-1;min-height:390px}.image-stack{padding:0 0 40px 35px}.image-stack img{height:460px}.footer-grid{grid-template-columns:1fr;gap:35px}.copyright{flex-direction:column;gap:8px}.cta{padding:80px 0}}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Cruz Cleans | Vacation Rental, Residential & Specialty Cleaning</title>
+  <meta name="description" content="Santa Cruz Cleans is a locally owned husband-and-wife cleaning service specializing in vacation rentals, move-out, post-construction and residential cleaning in Santa Cruz, CA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header>
-    <div class="nav wrap">
-      <a class="brand" href="https://www.kimbell-associates.com/" aria-label="Kimbell & Associates home"><img src="https://www.kimbell-associates.com/uploads/1/1/0/7/110790979/published/kimbell-and-associates-logo-white.png?1645660330" alt="Jeffrey J. Kimbell & Associates"></a>
-      <button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <nav class="navlinks" aria-label="Main navigation"><a href="#about">About</a><a href="#services">Expertise</a><a href="https://www.kimbell-associates.com/team.html">Team</a><a class="nav-cta" href="https://www.kimbell-associates.com/contact.html">Start a conversation</a></nav>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M3 17c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M12 3v4M9 5l3-2 3 2"/></svg>
+        </span>
+        <span class="brand-text"><strong>Santa Cruz Cleans</strong><span>Commercial · Residential · Specialty</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('menu').classList.toggle('open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-links" id="menu">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="vacation-rental.html">Vacation Rental</a></li>
+        <li><a href="specialty.html">Specialty Cleans</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn btn-primary nav-cta" href="contact.html">Free Quote</a></li>
+      </ul>
     </div>
   </header>
-  <main id="main">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div><div class="eyebrow">Healthcare policy · Washington, D.C.</div><h1 class="serif">Policy fluency.<br>Strategic influence.</h1><p class="hero-copy">Strategic legislative, regulatory, policy, and communications solutions for organizations shaping the future of life sciences.</p><div class="hero-actions"><a class="btn btn-light" href="#services">Explore our expertise</a><a class="btn btn-ghost" href="https://www.kimbell-associates.com/contact.html">Contact us</a></div></div>
-        <div class="hero-aside"><strong>Since 1998</strong><span>Trusted counsel at the intersection of policy, science, and progress</span></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="hero-badge">★★★★★ &nbsp;Locally owned in Santa Cruz, CA</span>
+      <h1>Spotless spaces, five-star service.</h1>
+      <p>At Santa Cruz Cleans our services are tailored to meet every need — from vacation rental turnovers and post-construction to move-out and residential cleaning. What sets us apart is our unwavering commitment to five-star quality.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="contact.html">Get a Free Quote</a>
+        <a class="btn btn-ghost" href="services.html">Explore Services</a>
       </div>
-    </section>
-    <section class="intro" id="about">
-      <div class="wrap intro-grid">
-        <aside><div class="eyebrow">The firm</div><div class="rule"></div><div class="fact"><strong>25</strong><span>Full-time professionals</span></div><div class="fact"><strong>85+</strong><span>Clients represented</span></div><div class="fact"><strong>3</strong><span>U.S. offices</span></div></aside>
-        <div><h2 class="serif">Deep expertise for a policy landscape that never stands still.</h2><div class="intro-copy"><p>Jeffrey J. Kimbell & Associates, Inc. provides strategic legislative, regulatory, policy, and advocacy solutions to clients in the life sciences community. The firm combines deep policy expertise with a comprehensive suite of communications and public affairs services.</p><p>Founded in 1998, Kimbell & Associates has grown to include 25 full-time professionals, including 11 lobbyists and 7 healthcare policy experts. Today, the firm represents more than 85 clients, primarily across the life sciences industry.</p><p>Drawing on experience in both the public and private sectors, the firm’s principals bring extensive institutional knowledge and relationships developed through service to Members of Congress, Governors, federal agencies, and private-sector organizations.</p><p>That integrated perspective helps clients identify opportunities, navigate challenges, engage key stakeholders, and advance their interests before Congress, the Administration, regulatory agencies, and the broader healthcare and technology communities.</p></div></div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What we do</span>
+        <h2>Cleaning tailored to your property</h2>
+        <p>Our expertise covers it all. Whether you manage a busy vacation rental or need a home ready for its next chapter, we handle every detail.</p>
       </div>
-    </section>
-    <section class="services" id="services">
-      <div class="wrap"><div class="section-head"><div><div class="eyebrow">Areas of expertise</div><h2 class="serif">Insight that moves<br>policy forward.</h2></div><p>Integrated counsel spanning advocacy, policy, communications, political strategy, and emerging technology.</p></div>
-        <div class="cards">
-          <a class="card" href="https://www.kimbell-associates.com/government-affairs.html"><img src="https://www.kimbell-associates.com/uploads/1/1/0/7/110790979/govt-affairs_orig.jpg" alt="United States Capitol"><div class="card-body"><span class="card-num">01</span><h3>Government Affairs</h3><span class="card-link">Learn more</span></div></a>
-          <a class="card" href="https://www.kimbell-associates.com/health-policy.html"><img src="https://www.kimbell-associates.com/uploads/1/1/0/7/110790979/life-sciences_orig.jpg" alt="Life sciences research"><div class="card-body"><span class="card-num">02</span><h3>Health Policy</h3><span class="card-link">Learn more</span></div></a>
-          <a class="card" href="https://www.kimbell-associates.com/pac-services.html"><img src="https://www.kimbell-associates.com/uploads/1/1/0/7/110790979/pac-services_orig.jpg" alt="Washington monument"><div class="card-body"><span class="card-num">03</span><h3>PAC Services</h3><span class="card-link">Learn more</span></div></a>
-          <a class="card" href="https://www.kimbell-associates.com/communications-public-affairs.html"><img src="https://www.kimbell-associates.com/uploads/1/1/0/7/110790979/comms-public-affairs-thumb_orig.jpg" alt="Public affairs communications"><div class="card-body"><span class="card-num">04</span><h3>Communications &amp;<br>Public Affairs</h3><span class="card-link">Learn more</span></div></a>
-          <a class="card" href="https://www.kimbell-associates.com/health-technology-artificial-intelligence.html"><img src="https://www.kimbell-associates.com/uploads/1/1/0/7/110790979/published/health-tech-ai.png?1780361394" alt="Health technology and artificial intelligence"><div class="card-body"><span class="card-num">05</span><h3>Health Technology &amp; AI</h3><span class="card-link">Learn more</span></div></a>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+          <h3>Vacation Rentals</h3>
+          <p>Meticulous guest-ready turnovers with linen service, restocking, inspections and after-hours emergency support.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V8l8-4 8 4v12"/><path d="M12 4v16"/></svg></div>
+          <h3>Post Construction</h3>
+          <p>Hauling, windows, floors, tile, lighting and appliances — we clear the dust so your finished space truly shines.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></div>
+          <h3>Move-Out &amp; Home Cleans</h3>
+          <p>Deep cleaning of kitchens, bathrooms, floors, carpets and surfaces so every room is left immaculate.</p>
         </div>
       </div>
-    </section>
-    <section class="difference"><div class="wrap difference-grid"><div><div class="eyebrow">The Kimbell difference</div><h2 class="serif">Experience in the rooms where decisions happen.</h2><p>Our team has helped shape legislative and policy agendas across Medicare, Medicaid, private healthcare, medical liability reform, FDA regulation, health technology innovation, and the responsible development and deployment of artificial intelligence.</p><div class="pillars"><div class="pillar"><b>01</b><strong>Institutional knowledge</strong></div><div class="pillar"><b>02</b><strong>Longstanding relationships</strong></div><div class="pillar"><b>03</b><strong>Integrated advocacy and communications</strong></div></div></div><div class="image-stack"><img src="https://www.kimbell-associates.com/uploads/1/1/0/7/110790979/govt-affairs_orig.jpg" alt="United States Capitol dome"><div class="image-note"><strong>85+</strong><span>Life sciences clients</span></div></div></div></section>
-    <section class="cta"><div class="wrap cta-inner"><div><div class="eyebrow">Let’s move policy forward</div><h2 class="serif">Bring clarity to your next challenge.</h2></div><a class="btn btn-light" href="https://www.kimbell-associates.com/contact.html">Start a conversation</a></div></section>
-  </main>
-  <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><img src="https://www.kimbell-associates.com/uploads/1/1/0/7/110790979/published/kimbell-and-associates-logo-white.png?1645660330" alt="Jeffrey J. Kimbell & Associates"><p>Strategic legislative, regulatory, policy, advocacy, communications, and public affairs counsel for the life sciences community.</p></div><div class="footer-col"><h3>Navigate</h3><a href="#about">About</a><a href="#services">Expertise</a><a href="https://www.kimbell-associates.com/team.html">Team</a><a href="https://www.kimbell-associates.com/contact.html">Contact</a></div><div class="footer-col"><h3>Locations</h3><span>Washington, DC</span><span>Park City, UT</span><span>Nashville, TN</span><a href="https://www.linkedin.com/company/kimbell-&-associates">LinkedIn ↗</a></div></div><div class="copyright"><span>© 2026 Jeffrey J. Kimbell &amp; Associates, Inc.</span><span>All rights reserved.</span></div></div></footer>
-  <script>const button=document.querySelector('.menu'),nav=document.querySelector('.navlinks');button.addEventListener('click',()=>{const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',open);button.textContent=open?'×':'☰'});</script>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-band">
+    <div class="container stats">
+      <div class="stat"><strong>5★</strong><span>Service standard</span></div>
+      <div class="stat"><strong>24/7</strong><span>Emergency turnovers</span></div>
+      <div class="stat"><strong>Local</strong><span>Owned &amp; operated</span></div>
+      <div class="stat"><strong>100%</strong><span>Satisfaction focus</span></div>
+    </div>
+  </section>
+
+  <!-- WHY US SPLIT -->
+  <section class="section section-tint">
+    <div class="container split">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80" alt="Bright, freshly cleaned interior" />
+      <div>
+        <span class="eyebrow">The Santa Cruz Cleans difference</span>
+        <h2>A husband-and-wife team who treats your property like our own</h2>
+        <p>Santa Cruz Cleans is owned and operated by Summer &amp; Kevin — a local duo dedicated to top-notch customer service and dependable results. We offer deep cleaning, sanitizing, move-out cleans and more.</p>
+        <p>For a reliable and efficient cleaning service, look no further. We guarantee satisfaction and are committed to making your property look its very best.</p>
+        <a class="btn btn-outline" href="about.html">Meet the team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready for a spotless space?</h2>
+      <p>Tell us the type of clean you need and any details — we'll send you a free quote.</p>
+      <a class="btn btn-primary" href="contact.html">Click Here for a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="margin-bottom:14px;">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M3 17c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/></svg></span>
+            <span class="brand-text"><strong>Santa Cruz Cleans</strong><span>Commercial · Residential · Specialty</span></span>
+          </a>
+          <p>Locally owned and operated by Summer &amp; Kevin. Five-star cleaning for vacation rentals, homes and beyond in Santa Cruz, California.</p>
+          <div class="social-row">
+            <a href="https://www.instagram.com/santacruzcleans/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+            <a href="https://www.facebook.com/profile.php?id=61550342353484" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="vacation-rental.html">Vacation Rental</a></li>
+            <li><a href="specialty.html">Specialty Cleans</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul class="footer-links">
+            <li><a href="tel:8318887929">831-888-7929</a></li>
+            <li><a href="mailto:scclean831@gmail.com">scclean831@gmail.com</a></li>
+            <li>Santa Cruz, CA 95062</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Santa Cruz Cleans. All rights reserved.</span>
+        <span>Made with care on the California coast.</span>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room in Fashion Valley — Female Roommate Wanted</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600;6..12,700&display=swap">
+  <style>
+    :root {
+      --color-hero: #1E3A2F;
+      --color-hero-text: #F2F0EC;
+      --color-accent: #D4943A;
+      --color-accent-hover: #BF8230;
+      --color-bg: #FAFAF8;
+      --color-card: #EDF0EB;
+      --color-card-border: #D8DDD4;
+      --color-text: #2B2B2B;
+      --color-text-muted: #5E6B62;
+      --color-divider: #D0D5CC;
+      --color-highlight: #F6F1E8;
+      --font-display: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+      --font-body: 'Nunito Sans', -apple-system, 'Segoe UI', sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --color-hero: #0F1F18;
+        --color-hero-text: #E8E5DF;
+        --color-accent: #E0A34D;
+        --color-accent-hover: #C8913B;
+        --color-bg: #161B17;
+        --color-card: #1E2520;
+        --color-card-border: #2E3A32;
+        --color-text: #D8D5CF;
+        --color-text-muted: #8A9488;
+        --color-divider: #2E3A32;
+        --color-highlight: #1E2820;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --color-hero: #0F1F18;
+      --color-hero-text: #E8E5DF;
+      --color-accent: #E0A34D;
+      --color-accent-hover: #C8913B;
+      --color-bg: #161B17;
+      --color-card: #1E2520;
+      --color-card-border: #2E3A32;
+      --color-text: #D8D5CF;
+      --color-text-muted: #8A9488;
+      --color-divider: #2E3A32;
+      --color-highlight: #1E2820;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero {
+      background: var(--color-hero);
+      color: var(--color-hero-text);
+      padding: 4.5rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 75% 20%, rgba(212,148,58,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 20% 80%, rgba(212,148,58,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5.5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.18;
+      text-wrap: balance;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: rgba(242,240,236,0.75);
+      max-width: 580px;
+      margin-bottom: 2.2rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid rgba(242,240,236,0.12);
+    }
+
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .hero-stat-value {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+
+    .hero-stat-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(242,240,236,0.5);
+    }
+
+    .section {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem;
+    }
+
+    .section + .section {
+      padding-top: 0;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 700;
+      line-height: 1.25;
+      text-wrap: balance;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    .section p {
+      color: var(--color-text-muted);
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .amenity-card {
+      background: var(--color-card);
+      border: 1px solid var(--color-card-border);
+      border-radius: 10px;
+      padding: 1.4rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .amenity-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(30,58,47,0.06);
+    }
+
+    .amenity-icon {
+      width: 36px;
+      height: 36px;
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+
+    .amenity-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .amenity-card p {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .household-section {
+      background: var(--color-highlight);
+      border-radius: 14px;
+      padding: 2.5rem 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .household-section h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: var(--color-text);
+    }
+
+    .household-section p {
+      color: var(--color-text-muted);
+      margin-bottom: 0;
+      max-width: none;
+    }
+
+    .household-traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+    }
+
+    .trait {
+      background: var(--color-card);
+      border: 1px solid var(--color-card-border);
+      border-radius: 20px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+    }
+
+    .neighborhood-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .highlight-item {
+      background: var(--color-card);
+      border: 1px solid var(--color-card-border);
+      border-radius: 10px;
+      padding: 1.1rem 1rem;
+      text-align: center;
+    }
+
+    .highlight-item .hi-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .highlight-item span {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-text);
+      display: block;
+    }
+
+    .highlight-item small {
+      font-size: 0.76rem;
+      color: var(--color-text-muted);
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--color-divider);
+      margin: 3rem auto;
+      max-width: 760px;
+    }
+
+    .cta-section {
+      background: var(--color-hero);
+      color: var(--color-hero-text);
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 700;
+      text-wrap: balance;
+      margin-bottom: 0.8rem;
+      color: var(--color-hero-text);
+    }
+
+    .cta-section p {
+      color: rgba(242,240,236,0.7);
+      margin-bottom: 2rem;
+      max-width: none;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--color-accent);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 0.9rem 2.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.15s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .cta-btn:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .cta-btn:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    .cta-contact {
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+      color: rgba(242,240,236,0.7);
+      margin-bottom: 0;
+    }
+
+    .cta-details {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(242,240,236,0.45);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+    }
+
+    .hero-decor {
+      position: absolute;
+      right: -40px;
+      bottom: -20px;
+      width: 280px;
+      height: 320px;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 3rem 1.25rem 2.5rem; }
+      .hero-stats { gap: 1.2rem; }
+      .section { padding: 2.5rem 1.25rem; }
+      .household-section { padding: 1.8rem 1.4rem; }
+      .hero-decor { display: none; }
+      .amenities-grid { grid-template-columns: 1fr; }
+      .neighborhood-highlights { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .amenity-card { transition: none; }
+      .cta-btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <svg class="hero-decor" viewBox="0 0 280 320" fill="none" aria-hidden="true">
+    <path d="M140 300 C140 200 60 180 40 100 C30 60 80 20 140 40 C200 20 250 60 240 100 C220 180 140 200 140 300Z" fill="currentColor"/>
+    <path d="M140 300 C140 220 180 200 200 140 C210 110 190 70 140 80 C100 70 70 110 80 140 C100 200 140 220 140 300Z" fill="currentColor" opacity="0.5"/>
+    <line x1="140" y1="300" x2="140" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+    <path d="M140 240 C120 230 100 240 90 260" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M140 200 C160 190 180 200 190 220" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
+  </svg>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Female Roommate Wanted &middot; Fashion Valley, San Diego</div>
+    <h1>A room in a home that's&nbsp;already&nbsp;a&nbsp;home.</h1>
+    <p class="hero-sub">
+      A spacious, air-conditioned house walking distance to USD and minutes from the beach.
+      Clean, comfortable, and looking for the right woman to join&nbsp;us.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value">$1,500</span>
+        <span class="hero-stat-label">Per Month</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">3 BR</span>
+        <span class="hero-stat-label">House</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">Fashion Valley</span>
+        <span class="hero-stat-label">San Diego, CA</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">ASAP</span>
+        <span class="hero-stat-label">Move-in</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-label">The Space</div>
+  <h2>Everything you need, nothing you don't</h2>
+  <p>
+    This is a well-kept, spacious three-bedroom house with central air conditioning and in-unit laundry.
+    Your private bedroom is in a quiet part of the home with plenty of natural&nbsp;light.
+  </p>
+
+  <div class="amenities-grid">
+    <div class="amenity-card">
+      <svg class="amenity-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="6" y="14" width="24" height="14" rx="2"/>
+        <path d="M10 14V10a8 8 0 0 1 16 0v4"/>
+        <line x1="18" y1="20" x2="18" y2="24"/>
+      </svg>
+      <h3>Private bedroom</h3>
+      <p>Your own room in a three-bedroom house with space to make it&nbsp;yours.</p>
+    </div>
+
+    <div class="amenity-card">
+      <svg class="amenity-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 28V10a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v18"/>
+        <path d="M6 18h24"/>
+        <path d="M14 8v10"/>
+        <circle cx="24" cy="24" r="3"/>
+      </svg>
+      <h3>Central A/C</h3>
+      <p>Stay cool year-round with full air conditioning throughout the&nbsp;home.</p>
+    </div>
+
+    <div class="amenity-card">
+      <svg class="amenity-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="8" y="6" width="20" height="24" rx="2"/>
+        <circle cx="18" cy="22" r="3"/>
+        <path d="M14 12h8"/>
+        <path d="M14 15h8"/>
+      </svg>
+      <h3>In-unit laundry</h3>
+      <p>Washer and dryer right in the home. No trips to the laundromat.</p>
+    </div>
+
+    <div class="amenity-card">
+      <svg class="amenity-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 20c3-3 6-3 9 0s6 3 9 0 6-3 9 0"/>
+        <path d="M4 24c3-3 6-3 9 0s6 3 9 0 6-3 9 0"/>
+        <rect x="8" y="10" width="20" height="10" rx="2"/>
+        <path d="M14 10V7"/>
+        <path d="M22 10V7"/>
+      </svg>
+      <h3>Pool access</h3>
+      <p>Cool off in the community pool — perfect for San Diego&nbsp;weather.</p>
+    </div>
+
+    <div class="amenity-card">
+      <svg class="amenity-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M8 10h6v8H8z"/>
+        <path d="M22 10h6v8h-6z"/>
+        <path d="M8 22h20v6H8z"/>
+        <path d="M18 10v8"/>
+      </svg>
+      <h3>Shared bathroom</h3>
+      <p>A clean, well-maintained bathroom shared with the&nbsp;household.</p>
+    </div>
+
+    <div class="amenity-card">
+      <svg class="amenity-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="4" y="20" width="28" height="8" rx="1"/>
+        <path d="M8 20V12a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8"/>
+        <line x1="10" y1="28" x2="10" y2="31"/>
+        <line x1="26" y1="28" x2="26" y2="31"/>
+      </svg>
+      <h3>Street parking</h3>
+      <p>Convenient street parking available right outside the&nbsp;house.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section">
+  <div class="section-label">The Household</div>
+  <h2>Who you'd be living with</h2>
+  <p>
+    You'd be sharing the home with a single mom who works full time at Trader Joe's and her
+    18-year-old daughter, who works two jobs and is finishing up high school. They're busy,
+    down-to-earth, and keep a clean, comfortable&nbsp;home.
+  </p>
+  <p>
+    There's also one older cat in the house — she mostly hides under the bed and keeps to herself.
+    If you have a cat, that's welcome — but <strong>no dogs or other pets</strong>,&nbsp;please.
+  </p>
+
+  <div class="household-section">
+    <h3>The ideal roommate</h3>
+    <p>
+      They're looking for a <strong>female roommate</strong> who is quiet, clean, and friendly.
+      This is a household where everyone respects each other's space and schedule — the kind
+      of place where you can actually come home and&nbsp;relax.
+    </p>
+    <div class="household-traits">
+      <span class="trait">Female roommate preferred</span>
+      <span class="trait">Quiet &amp; clean</span>
+      <span class="trait">Friendly</span>
+      <span class="trait">Cats OK, no dogs</span>
+      <span class="trait">Respectful of shared spaces</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section">
+  <div class="section-label">The Neighborhood</div>
+  <h2>Fashion Valley &amp; beyond</h2>
+  <p>
+    Walking distance to the University of San Diego and minutes from the beach, the airport,
+    and some of the best shopping and dining in the city. This is one of San Diego's most
+    connected&nbsp;neighborhoods.
+  </p>
+
+  <div class="neighborhood-highlights">
+    <div class="highlight-item">
+      <span class="hi-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h20"/><path d="M8 24V10l6-4 6 4v14"/><path d="M12 24v-6h4v6"/></svg>
+      </span>
+      <span>University of San Diego</span>
+      <small>Walking distance</small>
+    </div>
+    <div class="highlight-item">
+      <span class="hi-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18c2-4 5-6 10-6s8 2 10 6"/><path d="M4 22c2-2 5-3 10-3s8 1 10 3"/><path d="M4 14c3-5 6-8 10-8s7 3 10 8"/></svg>
+      </span>
+      <span>Near the beach</span>
+      <small>Minutes away</small>
+    </div>
+    <div class="highlight-item">
+      <span class="hi-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20l4-12h8l4 12"/><path d="M4 20h20"/><path d="M14 8V5"/><path d="M10 5h8"/></svg>
+      </span>
+      <span>Airport nearby</span>
+      <small>San Diego Intl (SAN)</small>
+    </div>
+    <div class="highlight-item">
+      <span class="hi-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h20"/><path d="M8 24V12l6-4 6 4v12"/><path d="M12 24v-6h4v6"/></svg>
+      </span>
+      <span>Fashion Valley Mall</span>
+      <small>Shopping &amp; dining</small>
+    </div>
+    <div class="highlight-item">
+      <span class="hi-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="20" height="14" rx="2"/><path d="M4 14h20"/><circle cx="9" cy="20" r="2"/><circle cx="19" cy="20" r="2"/></svg>
+      </span>
+      <span>Trolley access</span>
+      <small>Green Line nearby</small>
+    </div>
+    <div class="highlight-item">
+      <span class="hi-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="9"/><path d="M14 9v5l3 3"/></svg>
+      </span>
+      <span>Freeway access</span>
+      <small>I-8 &amp; I-163</small>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Interested? Let's talk.</h2>
+    <p>
+      If this sounds like the right fit, reach out and introduce yourself.
+      Tell us a little about you — we'd love to hear from&nbsp;you.
+    </p>
+    <a class="cta-btn" href="mailto:kristihazlett3@gmail.com?subject=Room%20in%20Fashion%20Valley%20-%20Interested">
+      Email Kristi
+    </a>
+    <p class="cta-contact">
+      Or call/text: <a href="tel:+16197884407" style="color:var(--color-accent);text-decoration:none;font-weight:600;">(619) 788-4407</a>
+    </p>
+    <p class="cta-details">
+      $1,500/month &middot; Fashion Valley, San Diego &middot; Move-in ASAP
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  Room for rent in Fashion Valley, San Diego, CA
+</footer>
+
+</body>
+</html>
